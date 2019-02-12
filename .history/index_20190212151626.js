@@ -15,7 +15,7 @@ const schema = makeExecutableSchema({
 
 const app = express()
 
-app.use(getUserIdMiddleware) 
+app.use(getUserIdMiddleware)
 
 app.use('/graphql', graphqlHTTP( req => ({
   schema,

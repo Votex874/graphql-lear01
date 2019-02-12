@@ -19,7 +19,7 @@ export const login = async (email, password) => {
   const valid = await bcrypt.compare(password, user.passwordHash)
   if (!valid) { throw new Error('Wrong password') }
 
-  return { token: generateToken(user), user } 
+  return { token: generateToken(user), user }
 }
 
 export const getUserIdMiddleware = async (req) => {

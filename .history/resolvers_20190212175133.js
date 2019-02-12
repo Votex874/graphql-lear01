@@ -6,7 +6,7 @@ export default {
       if (userId) {
         return models.User.findOne({ where: { id: userId }})
       } else {
-        return null
+        return
       }
     },
     allUsers: (parent, args, { models }) => models.User.findAll(),

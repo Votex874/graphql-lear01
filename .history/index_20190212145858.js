@@ -15,15 +15,12 @@ const schema = makeExecutableSchema({
 
 const app = express()
 
-app.use(getUserIdMiddleware) 
+app.use(getUserIdMiddleware)
 
-app.use('/graphql', graphqlHTTP( req => ({
+app.use('/graphql', graphqlHTTP({
   schema,
-  context: { 
-    models,
-    userId: req.userId
-   },
+  context: { models },
   graphiql: true,
-})));
+}));
 app.listen(4000)
 console.log('Running a GraphQL API server at localhost:4000/graphql')

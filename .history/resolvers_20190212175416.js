@@ -4,7 +4,7 @@ export default {
   Query: {
     me: (parent, args, { models, userId }) => {
       if (userId) {
-        return models.User.findOne({ where: { id: userId }})
+        models.User.findOne({ where: { id: userId }})
       } else {
         return null
       }

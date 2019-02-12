@@ -15,13 +15,13 @@ const schema = makeExecutableSchema({
 
 const app = express()
 
-app.use(getUserIdMiddleware) 
+app.use(getUserIdMiddleware)
 
 app.use('/graphql', graphqlHTTP( req => ({
   schema,
   context: { 
     models,
-    userId: req.userId
+    user: req.userId
    },
   graphiql: true,
 })));
