@@ -35,10 +35,7 @@ app.use('/graphql', graphqlHTTP( req => ({
   schema,
   context: { 
     models,
-    userId: req.userId,
-    loaders: {
-      user: new DataLoader(keys => batchUsers(keys, models))
-    }
+    userId: req.userId
    },
   graphiql: true,
 })));
