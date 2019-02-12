@@ -9,7 +9,7 @@ export default {
 
   Mutation: {
     registerUser: (parent, { firstName, lastName, email, passwordHash }, { models }) => 
-      userService.register(firstName, lastName, email, passwordHash), 
+      userService.register(firstName, lastName, email, password), 
     updateUser: (parent, { id, firstName, email }, { models }) => 
       models.User.update({ firstName, email }, { where: { id } }),
     deleteUser: (parent, args, { models }) =>
