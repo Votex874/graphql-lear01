@@ -23,6 +23,7 @@
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.1.1",
+    "graphql-tools": "^4.0.4",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.5",
     "nodemon": "^1.18.10",
