@@ -9,14 +9,14 @@ export default `
     updatedAt: String!
   }
 
-  type AuthenticatedUser {
-    token: String!
-    user: User!
-  }
-
   type Query{
     allUsers: [User!]!
     getUser(id: Int!): User
+  }
+
+  type AuthenticatedUser {
+    token: String!
+    user: User!
   }
 
   type Mutation {

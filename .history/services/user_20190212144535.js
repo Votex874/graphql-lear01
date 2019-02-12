@@ -2,8 +2,10 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import models from '../db/models'
 
-const generateToken = (user) => 
+const generateToken = (user) => {
   jwt.sign({ userId: user.id }, 'secret', { expiresIn: '30d' })
+
+}
 
 export const register = async (firstName, lastName, email, password) => {
   const passwordHash = await bcrypt.hash(password, 10)
